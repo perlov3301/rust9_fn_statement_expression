@@ -14,10 +14,12 @@
      println!{"y is {} ", y};
      fadd_one(x,y);
   // fadd_two=expression (has returned value)
-     let mut a1= fadd_two(2.0,3.0);
-     println!("returned value of fadd_two is {}", a1);
-     a1 = f_expression();
-     println!("returned value of f_expression is {}", a1);
+     let mut x1= fadd_two(2.0,3.0);
+     println!("returned value of fadd_two is {}", x1);
+     x1 = f_expression();
+     println!("returned value of f_expression is {}", x1);
+     x1 = f_expression1(10.0, 11.0);
+     println!("returned value of f_expression1 is {}", x1);
 }
   fn ftest_one(a:&str ) {
     println!("{} of outside function",a);
@@ -34,6 +36,9 @@
     a1+a2
   }
   fn f_expression() -> f32 {
-    10.0
+    return 10.0;
+  }
+  fn f_expression1(a1:f32, a2:f32) -> f32 {
+    return a1 + a2;
   }
 
