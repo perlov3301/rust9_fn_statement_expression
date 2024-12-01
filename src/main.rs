@@ -39,6 +39,7 @@
     return 10.0;
   }
   fn f_expression1(a1:f32, a2:f32) -> f32 {
-    return a1 + a2;
+    let a3 = a1 + a2;
+    return a3;
   }
 
