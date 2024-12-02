@@ -20,6 +20,9 @@
      println!("returned value of f_expression is {}", x1);
      x1 = f_expression1(10.0, 11.0);
      println!("returned value of f_expression1 is {}", x1);
+     x1 = f_expression2(11.0, 12.0);
+     println!("f_expression2;{}", x1);
+     x1 = f_expression3(2.0, 3.0);
 }
   fn ftest_one(a:&str ) {
     println!("{} of outside function",a);
@@ -41,5 +44,15 @@
   fn f_expression1(a1:f32, a2:f32) -> f32 {
     let a3 = a1 + a2;
     return a3;
+  }
+  fn f_expression2(a1:f32, a2:f32) -> f32{
+    let a3= a1 + a2;
+    if a3>10.0 { return a3-10.0; }
+    a3
+  }
+  fn f_expression3(a1:f32, a2:f32) -> f32 {
+    let a3 = a1+a2;
+    println!("f_expresson3();sum of {} and {} is {}", a1, a2, a3);
+    a3
   }
 
